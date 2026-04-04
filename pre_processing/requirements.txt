@@ -1,0 +1,7 @@
+pandas
+numpy
+json
+matplotlib
+collections
+seaborn
+re
