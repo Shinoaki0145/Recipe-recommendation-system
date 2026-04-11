@@ -1,0 +1,91 @@
+{
+  "trained_at_utc": "2026-04-11T13:49:29.544552+00:00",
+  "labels_path": "dataset\\recipes_dataset_ver1.csv",
+  "recipes_path": "dataset\\recipes_processed.json",
+  "n_catalog_recipes": 10253,
+  "n_labeled_pairs": 3750,
+  "n_labeled_recipes": 1217,
+  "feature_count": 26,
+  "split_summary": {
+    "train_queries": 175,
+    "val_queries": 37,
+    "test_queries": 38,
+    "train_rows": 2625,
+    "val_rows": 555,
+    "test_rows": 570,
+    "test_groups": 38
+  },
+  "clean_test_metrics": {
+    "NDCG@5": 0.7563750748537759,
+    "NDCG@10": 0.7806925581435186,
+    "MRR": 0.5830940988835727,
+    "HIT@5": 0.6578947368421053,
+    "HIT@10": 0.7105263157894737
+  },
+  "top_feature_importance": [
+    {
+      "feature": "category_match_score",
+      "importance": 0.0693066194653511
+    },
+    {
+      "feature": "time_constraint_satisfied",
+      "importance": 0.05309051275253296
+    },
+    {
+      "feature": "serving_match",
+      "importance": 0.049973998218774796
+    },
+    {
+      "feature": "quick_match",
+      "importance": 0.0474650040268898
+    },
+    {
+      "feature": "serving_distance",
+      "importance": 0.04736468940973282
+    },
+    {
+      "feature": "vector_sim_score",
+      "importance": 0.04585878178477287
+    },
+    {
+      "feature": "prep_time_margin",
+      "importance": 0.04302532225847244
+    },
+    {
+      "feature": "popularity_match",
+      "importance": 0.042627204209566116
+    },
+    {
+      "feature": "ingredient_match_ratio",
+      "importance": 0.03888440877199173
+    },
+    {
+      "feature": "total_time_margin",
+      "importance": 0.03797811642289162
+    },
+    {
+      "feature": "ingredient_exact_hit",
+      "importance": 0.03769560158252716
+    },
+    {
+      "feature": "difficulty_level",
+      "importance": 0.0374293327331543
+    },
+    {
+      "feature": "time_limit_min",
+      "importance": 0.036006830632686615
+    },
+    {
+      "feature": "title_overlap_ratio",
+      "importance": 0.03578512370586395
+    },
+    {
+      "feature": "category_exact_hit",
+      "importance": 0.0338660292327404
+    }
+  ],
+  "final_training_rows": 3750,
+  "unused_eval_targets": {
+    "y_test_size": 570
+  }
+}
