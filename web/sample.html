@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Search Results - Heirloom Kitchen</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700&amp;family=Noto+Serif:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary": "#ffffff",
+                        "inverse-on-surface": "#f6f0eb",
+                        "surface-container-low": "#f8f3ee",
+                        "on-tertiary-fixed": "#002201",
+                        "secondary-container": "#fed023",
+                        "primary-container": "#c64f00",
+                        "on-error": "#ffffff",
+                        "surface-container-highest": "#e7e1dd",
+                        "outline-variant": "#e0c0b2",
+                        "surface-container-lowest": "#ffffff",
+                        "primary": "#9e3d00",
+                        "on-tertiary": "#ffffff",
+                        "primary-fixed-dim": "#ffb595",
+                        "background": "#fef8f3",
+                        "primary-fixed": "#ffdbcd",
+                        "tertiary-fixed-dim": "#a1d494",
+                        "on-tertiary-container": "#f8fff0",
+                        "on-secondary-fixed-variant": "#574500",
+                        "on-secondary-container": "#6f5900",
+                        "surface-dim": "#ded9d4",
+                        "surface-variant": "#e7e1dd",
+                        "inverse-primary": "#ffb595",
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed-variant": "#23501e",
+                        "tertiary-fixed": "#bcf0ae",
+                        "on-surface-variant": "#594238",
+                        "on-primary-fixed": "#351000",
+                        "surface-container-high": "#ede7e2",
+                        "outline": "#8c7166",
+                        "inverse-surface": "#32302d",
+                        "surface-bright": "#fef8f3",
+                        "surface": "#fef8f3",
+                        "surface-container": "#f3ede8",
+                        "on-primary-fixed-variant": "#7c2e00",
+                        "on-surface": "#1d1b19",
+                        "error-container": "#ffdad6",
+                        "tertiary": "#396632",
+                        "on-secondary": "#ffffff",
+                        "tertiary-container": "#518048",
+                        "secondary": "#735c00",
+                        "on-secondary-fixed": "#231b00",
+                        "on-background": "#1d1b19",
+                        "surface-tint": "#a23f00",
+                        "secondary-fixed-dim": "#eec209",
+                        "secondary-fixed": "#ffe084",
+                        "on-primary-container": "#fffbff",
+                        "on-error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "md": "24px",
+                        "gutter": "24px",
+                        "lg": "40px",
+                        "margin": "32px",
+                        "base": "8px",
+                        "sm": "12px",
+                        "xl": "64px",
+                        "xs": "4px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Be Vietnam Pro"],
+                        "headline-lg": ["Noto Serif"],
+                        "body-md": ["Be Vietnam Pro"],
+                        "label-sm": ["Be Vietnam Pro"],
+                        "headline-md": ["Noto Serif"],
+                        "label-md": ["Be Vietnam Pro"],
+                        "headline-xl": ["Noto Serif"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+                        "headline-xl": ["48px", { "lineHeight": "56px", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md font-body-md antialiased min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="bg-[#FDF7F2] dark:bg-stone-950 w-full border-b border-orange-100 dark:border-stone-800 shadow-sm shadow-[#D35400]/5 z-50">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+<div class="text-2xl font-bold font-serif text-[#D35400] dark:text-orange-500">Heirloom Kitchen</div>
+<nav class="hidden md:flex gap-6 items-center">
+<a class="text-[#D35400] dark:text-orange-500 border-b-2 border-[#D35400] font-semibold pb-1 hover:text-[#D35400] hover:bg-orange-50/50 dark:hover:bg-stone-900 transition-all active:scale-95 duration-150 ease-in-out" href="#">Explore</a>
+<a class="text-stone-600 dark:text-stone-400 font-medium hover:text-[#D35400] hover:bg-orange-50/50 dark:hover:bg-stone-900 transition-all active:scale-95 duration-150 ease-in-out" href="#">Categories</a>
+<a class="text-stone-600 dark:text-stone-400 font-medium hover:text-[#D35400] hover:bg-orange-50/50 dark:hover:bg-stone-900 transition-all active:scale-95 duration-150 ease-in-out" href="#">My Cookbook</a>
+<a class="text-stone-600 dark:text-stone-400 font-medium hover:text-[#D35400] hover:bg-orange-50/50 dark:hover:bg-stone-900 transition-all active:scale-95 duration-150 ease-in-out" href="#">Community</a>
+</nav>
+<div class="flex items-center gap-4">
+<div class="relative hidden sm:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant/70">search</span>
+<input class="pl-10 pr-4 py-2 bg-surface-container rounded-full border-2 border-outline-variant focus:border-primary focus:ring-0 text-body-md font-body-md shadow-inner w-64 transition-colors" placeholder="Search for 'cá kho'..." type="text" value="cá kho"/>
+</div>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-lg font-label-md font-label-md hover:bg-surface-tint transition-colors">Sign In</button>
+</div>
+</div>
+</header>
+<main class="flex-grow w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-lg grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Page Header -->
+<div class="col-span-1 lg:col-span-12 mb-md">
+<h1 class="font-headline-lg text-headline-lg text-on-background">Search Results for "cá kho"</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-xs">Found 12 traditional recipes to warm your home.</p>
+</div>
+<!-- Sidebar Filters -->
+<aside class="col-span-1 lg:col-span-3 space-y-lg">
+<div class="bg-surface-container-lowest p-md rounded-xl shadow-[0_4px_12px_rgba(211,84,0,0.05)] border border-outline-variant/30">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-md pb-xs border-b border-outline-variant/50">Filters</h3>
+<div class="space-y-sm mb-md">
+<h4 class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Category</h4>
+<label class="flex items-center gap-sm cursor-pointer group">
+<input checked="" class="form-checkbox h-5 w-5 text-primary border-outline-variant rounded focus:ring-primary focus:ring-offset-background bg-surface-container-lowest" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface group-hover:text-primary transition-colors">Món kho (Braised)</span>
+</label>
+<label class="flex items-center gap-sm cursor-pointer group">
+<input class="form-checkbox h-5 w-5 text-primary border-outline-variant rounded focus:ring-primary focus:ring-offset-background bg-surface-container-lowest" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface group-hover:text-primary transition-colors">Món canh (Soup)</span>
+</label>
+</div>
+<div class="space-y-sm mb-md">
+<h4 class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Difficulty</h4>
+<label class="flex items-center gap-sm cursor-pointer group">
+<input class="form-checkbox h-5 w-5 text-primary border-outline-variant rounded focus:ring-primary focus:ring-offset-background bg-surface-container-lowest" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface group-hover:text-primary transition-colors">Dễ (Easy)</span>
+</label>
+<label class="flex items-center gap-sm cursor-pointer group">
+<input class="form-checkbox h-5 w-5 text-primary border-outline-variant rounded focus:ring-primary focus:ring-offset-background bg-surface-container-lowest" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface group-hover:text-primary transition-colors">Trung bình (Medium)</span>
+</label>
+</div>
+<div class="space-y-sm">
+<h4 class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Cook Time</h4>
+<label class="flex items-center gap-sm cursor-pointer group">
+<input class="form-radio h-5 w-5 text-primary border-outline-variant focus:ring-primary focus:ring-offset-background bg-surface-container-lowest" name="time" type="radio"/>
+<span class="font-body-md text-body-md text-on-surface group-hover:text-primary transition-colors">&lt; 1 hour</span>
+</label>
+<label class="flex items-center gap-sm cursor-pointer group">
+<input class="form-radio h-5 w-5 text-primary border-outline-variant focus:ring-primary focus:ring-offset-background bg-surface-container-lowest" name="time" type="radio"/>
+<span class="font-body-md text-body-md text-on-surface group-hover:text-primary transition-colors">1-3 hours</span>
+</label>
+<label class="flex items-center gap-sm cursor-pointer group">
+<input checked="" class="form-radio h-5 w-5 text-primary border-outline-variant focus:ring-primary focus:ring-offset-background bg-surface-container-lowest" name="time" type="radio"/>
+<span class="font-body-md text-body-md text-on-surface group-hover:text-primary transition-colors">&gt; 3 hours</span>
+</label>
+</div>
+</div>
+</aside>
+<!-- Search Results List -->
+<div class="col-span-1 lg:col-span-9 flex flex-col gap-md">
+<!-- Recipe Card 1 -->
+<article class="bg-surface-container-lowest rounded-xl shadow-[0_4px_12px_rgba(211,84,0,0.05)] border border-outline-variant/30 overflow-hidden flex flex-col group hover:shadow-[0_12px_24px_rgba(211,84,0,0.1)] transition-all duration-300">
+<div class="flex flex-col md:flex-row">
+<div class="md:w-1/3 relative overflow-hidden h-64 md:h-auto shrink-0">
+<img alt="Vietnamese braised fish" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Traditional Vietnamese braised fish (cá kho) in a clay pot, rich dark brown sauce, rustic wooden table setting, warm overhead lighting, comforting mood" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpo04NZPs7Ch_q6ZrDZpOkf-N9HVzvIAzzDODIMvq771UCXIS37k4O7F5bBFFRUWZmkuNiP4ygyBESdwN58-2YdL8ERim6jtQ1oXO6a_CzIS9qPDouLKCC_bEbSaB552xty5GPcleqc83Iy2b2aL4GycAE0ZXr7fTwHDmP0_UWAftV-He-ZkB2WhP27Uaxg4hSS_L9UfFJoTp0jrOiQcS9KuPjY9_0ofT30kof_bKXy30rF2CRMfJuwMZoaF43uKNIluwPeWPR2Nc"/>
+<div class="absolute top-sm left-sm flex gap-xs">
+<span class="bg-surface-container-lowest/90 backdrop-blur-sm px-3 py-1 rounded-full font-label-sm text-label-sm text-on-surface shadow-sm">Món kho</span>
+</div>
+</div>
+<div class="p-md flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-sm">
+<h2 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors">Cá diếc kho tương bần</h2>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm shrink-0">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+                            18,899
+                        </div>
+</div>
+<div class="flex flex-wrap gap-x-6 gap-y-2 mt-sm pb-sm border-b border-outline-variant/30">
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+                            Total: 510 min
+                        </div>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">timer</span>
+                            Prep: 30 min
+                        </div>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">cooking</span>
+                            Cook: 480 min
+                        </div>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">restaurant</span>
+                            Servings: 2-3 người
+                        </div>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">signal_cellular_alt</span>
+                            Difficulty: Dễ
+                        </div>
+</div>
+</div>
+</div>
+<div class="p-md grid grid-cols-1 md:grid-cols-2 gap-md border-t border-outline-variant/30">
+<div>
+<h4 class="font-label-md text-label-md text-on-surface mb-sm">Ingredients:</h4>
+<ul class="font-body-md text-body-md text-on-surface-variant list-disc list-inside space-y-2">
+<li>Cá diếc: 500 gr</li>
+<li>Chuối xanh: 3 quả</li>
+<li>Tương bần: 100 ml</li>
+<li>Thịt ba chỉ: 200 gr</li>
+<li>Khế chua: 2 quả</li>
+<li>Gia vị (mắm, muối, tiêu, đường): 1 ít</li>
+<li>Hành khô: 2 củ</li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface mb-sm">Instructions:</h4>
+<div class="space-y-4">
+<div>
+<h5 class="font-label-md text-label-md text-on-surface-variant mb-1">1. Sơ chế nguyên liệu</h5>
+<p class="font-body-md text-body-md text-on-surface-variant">Cá diếc mổ bỏ ruột, đánh vảy, rửa sạch với muối và giấm cho hết nhớt. Chuối xanh tước vỏ, thái vát, ngâm nước muối loãng. Khế chua thái lát. Thịt ba chỉ thái miếng vừa ăn. Hành khô băm nhỏ.</p>
+</div>
+<div>
+<h5 class="font-label-md text-label-md text-on-surface-variant mb-1">2. Ướp cá</h5>
+<p class="font-body-md text-body-md text-on-surface-variant">Ướp cá với hành khô, 1 thìa nước mắm, 1 thìa cà phê tiêu, 1 thìa đường, và tương bần trong khoảng 30 phút cho ngấm.</p>
+</div>
+<div>
+<h5 class="font-label-md text-label-md text-on-surface-variant mb-1">3. Kho cá</h5>
+<p class="font-body-md text-body-md text-on-surface-variant">Xếp chuối xanh và khế chua lót dưới đáy nồi đất. Xếp tiếp thịt ba chỉ rồi đặt cá lên trên. Đổ nước xâm xấp mặt cá, đun sôi rồi hạ nhỏ lửa, kho riu riu từ 6-8 tiếng cho đến khi cá nhừ xương, nước cạn sánh lại.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- Recipe Card 2 -->
+<article class="bg-surface-container-lowest rounded-xl shadow-[0_4px_12px_rgba(211,84,0,0.05)] border border-outline-variant/30 overflow-hidden flex flex-col group hover:shadow-[0_12px_24px_rgba(211,84,0,0.1)] transition-all duration-300">
+<div class="flex flex-col md:flex-row">
+<div class="md:w-1/3 relative overflow-hidden h-64 md:h-auto shrink-0">
+<img alt="Braised fish with pork belly" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Vietnamese braised fish with caramelised pork belly slices, garnished with green onions and chili, dark rich sauce, ceramic bowl, moody lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_jyK69-lBTpoP4Kt68EyxfGAaFoMlNaHM2GuukmrZRoH8M8HWOGDDQp66R2rBqJcM6iyGQSO9TzUG84i8RF-tcx11eBW7XZFmbrIkD4P_wYbZBsus3BA06lZ2ZTQSVNsIMEV5Njq-Fqk0Vy9poHou6vIniucRvY2BBloh7yHiQ91aCfaIqBTAG39iyIhC_JzIpC7nDutDlp_7JTQIKSCvU8dlKET9Vy6zDmu4SqtvxTveyLHfWsNAFYC1jBmP6_urnlgGL6iYrTE"/>
+<div class="absolute top-sm left-sm flex gap-xs">
+<span class="bg-surface-container-lowest/90 backdrop-blur-sm px-3 py-1 rounded-full font-label-sm text-label-sm text-on-surface shadow-sm">Món kho</span>
+</div>
+</div>
+<div class="p-md flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-sm">
+<h2 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors">Cá lóc kho tộ</h2>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm shrink-0">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+                            24,102
+                        </div>
+</div>
+<div class="flex flex-wrap gap-x-6 gap-y-2 mt-sm pb-sm border-b border-outline-variant/30">
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+                            Total: 60 min
+                        </div>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">timer</span>
+                            Prep: 20 min
+                        </div>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">cooking</span>
+                            Cook: 40 min
+                        </div>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">restaurant</span>
+                            Servings: 4 người
+                        </div>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">signal_cellular_alt</span>
+                            Difficulty: Khó
+                        </div>
+</div>
+</div>
+</div>
+<div class="p-md grid grid-cols-1 md:grid-cols-2 gap-md border-t border-outline-variant/30">
+<div>
+<h4 class="font-label-md text-label-md text-on-surface mb-sm">Ingredients:</h4>
+<ul class="font-body-md text-body-md text-on-surface-variant list-disc list-inside space-y-2">
+<li>Cá lóc (Snakehead fish): 800 gr</li>
+<li>Thịt ba chỉ (Pork belly): 200 gr</li>
+<li>Nước mắm (Fish sauce): 3 muỗng canh</li>
+<li>Đường (Sugar): 2 muỗng canh</li>
+<li>Nước màu (Caramel sauce): 1 muỗng canh</li>
+<li>Hành, tỏi băm: 2 muỗng canh</li>
+<li>Tiêu, ớt: 1 ít</li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface mb-sm">Instructions:</h4>
+<div class="space-y-4">
+<div>
+<h5 class="font-label-md text-label-md text-on-surface-variant mb-1">1. Sơ chế</h5>
+<p class="font-body-md text-body-md text-on-surface-variant">Làm sạch cá, xát muối để khử mùi tanh, cắt khúc vừa ăn. Thịt ba chỉ thái miếng nhỏ.</p>
+</div>
+<div>
+<h5 class="font-label-md text-label-md text-on-surface-variant mb-1">2. Ướp cá</h5>
+<p class="font-body-md text-body-md text-on-surface-variant">Ướp cá với hành tỏi băm, nước mắm, đường, tiêu và nước màu trong khoảng 30 phút.</p>
+</div>
+<div>
+<h5 class="font-label-md text-label-md text-on-surface-variant mb-1">3. Kho</h5>
+<p class="font-body-md text-body-md text-on-surface-variant">Rang thịt ba chỉ cho ra bớt mỡ, xém cạnh. Xếp thịt dưới đáy tộ đất, cho cá đã ướp lên trên. Đun lửa lớn cho sôi bùng rồi hạ lửa nhỏ, kho liu riu cho đến khi nước sệt lại, cá thấm gia vị.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- Load More Button -->
+<div class="flex justify-center mt-lg">
+<button class="border border-tertiary text-tertiary px-6 py-3 rounded-lg font-label-md font-label-md hover:bg-surface-container transition-colors">Load More Recipes</button>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-stone-100 dark:bg-stone-900 w-full mt-auto border-t border-stone-200 dark:border-stone-800">
+<div class="flex flex-col items-center py-12 px-4 w-full gap-6 text-center max-w-7xl mx-auto">
+<div class="text-lg font-bold text-[#D35400] font-serif">Heirloom Kitchen</div>
+<nav class="flex flex-wrap justify-center gap-6">
+<a class="text-stone-500 dark:text-stone-400 font-serif text-sm hover:text-[#D35400] hover:underline transition-colors opacity-90 hover:opacity-100 duration-200" href="#">About Us</a>
+<a class="text-stone-500 dark:text-stone-400 font-serif text-sm hover:text-[#D35400] hover:underline transition-colors opacity-90 hover:opacity-100 duration-200" href="#">Privacy Policy</a>
+<a class="text-stone-500 dark:text-stone-400 font-serif text-sm hover:text-[#D35400] hover:underline transition-colors opacity-90 hover:opacity-100 duration-200" href="#">Terms of Service</a>
+<a class="text-stone-500 dark:text-stone-400 font-serif text-sm hover:text-[#D35400] hover:underline transition-colors opacity-90 hover:opacity-100 duration-200" href="#">Contact</a>
+<a class="text-stone-500 dark:text-stone-400 font-serif text-sm hover:text-[#D35400] hover:underline transition-colors opacity-90 hover:opacity-100 duration-200" href="#">Newsletter</a>
+</nav>
+<p class="font-serif text-sm text-stone-600 dark:text-stone-400">© 2024 Heirloom Kitchen. Nourishing the soul, one recipe at a time.</p>
+</div>
+</footer>
+</body></html>
