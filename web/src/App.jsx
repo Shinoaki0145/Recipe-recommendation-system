@@ -10,7 +10,7 @@ function App() {
   const [results, setResults] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
-  const fetchRecommendations = async (query) => {
+  const fetchRecommendations = async (query, limit) => {
     const response = await fetch(`${API_BASE_URL}/rank`, {
       method: "POST",
       headers: {
@@ -19,7 +19,7 @@ function App() {
       body: JSON.stringify({
         query,
         candidate_top_k: 30,
-        result_top_k: 5
+        result_top_k: limit || 5
       }),
     });
 
@@ -32,10 +32,10 @@ function App() {
     return Array.isArray(data?.items) ? data.items : [];
   };
 
-  const handleSearch = async (query) => {
+  const handleSearch = async (query, limit) => {
     setIsLoading(true);
     try {
-      const apiResults = await fetchRecommendations(query);
+      const apiResults = await fetchRecommendations(query, limit);
       setResults(Array.isArray(apiResults) ? apiResults : []);
     } catch (error) {
       console.error("Failed to fetch recommendations:", error);

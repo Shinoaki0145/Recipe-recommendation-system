@@ -1,0 +1,22 @@
+{
+  "artifact_path": "artifacts\\recipe_ranker.joblib",
+  "labels_path": "dataset\\recipes_dataset.csv",
+  "recipes_path": "dataset\\recipes_processed.json",
+  "rows": 7500,
+  "queries": 500,
+  "catalog_recipes": 10253,
+  "train_rows": 5250,
+  "test_rows": 2250,
+  "train_queries": 350,
+  "test_queries": 150,
+  "eval_fit_time_sec": 2.802709199999981,
+  "eval_predict_time_sec": 0.0037058000000342872,
+  "full_fit_time_sec": 0.04174599999998918,
+  "test_metrics": {
+    "NDCG@5": 0.7912337334118068,
+    "NDCG@10": 0.8285844620971083,
+    "MRR": 0.6710683760683761,
+    "HIT@5": 0.76,
+    "HIT@10": 0.78
+  }
+}

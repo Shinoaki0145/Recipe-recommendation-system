@@ -3,11 +3,12 @@ import { useNavigate } from "react-router-dom";
 
 export default function SearchInput({ onSearch, isLoading }) {
     const [query, setQuery] = useState("");
+    const [limit, setLimit] = useState(5);
     const navigate = useNavigate();
 
     const handleSearch = async () => {
         if (isLoading) return;
-        await onSearch(query);
+        await onSearch(query, limit);
         navigate("/results");
     };
 
@@ -47,13 +48,55 @@ export default function SearchInput({ onSearch, isLoading }) {
                         ></textarea>
                         <button
                             type="button"
-                            className="hero-gradient text-on-primary font-bold px-8 py-4 rounded-full flex items-center gap-2 hover:scale-[1.02] active:scale-95 transition-all disabled:opacity-70 disabled:cursor-not-allowed"
+                            className="hero-gradient text-on-primary font-bold px-8 py-4 rounded-full flex items-center gap-2 hover:scale-[1.02] active:scale-95 transition-all disabled:opacity-70 disabled:cursor-not-allowed shrink-0"
                             onClick={handleSearch}
                             disabled={isLoading}
                         >
                             <span>{isLoading ? "Loading..." : "Search"}</span>
                             <span className="material-symbols-outlined text-sm">{isLoading ? "hourglass_top" : "auto_awesome"}</span>
                         </button>
+                    </div>
+                    
+                    <div className="mt-6 flex justify-center items-center gap-3 opacity-80 hover:opacity-100 transition-opacity select-none">
+                        <span className="text-on-surface-variant text-sm font-medium">Return up to</span>
+                        <div className="flex items-center bg-surface-container-lowest rounded-full p-1 border border-outline-variant/30 shadow-sm">
+                            <button 
+                                type="button"
+                                onMouseDown={(e) => e.preventDefault()}
+                                onClick={() => setLimit(prev => Math.max(1, Number(prev || 5) - 1))}
+                                className="w-8 h-8 flex items-center justify-center rounded-full hover:bg-surface-container hover:text-primary transition-colors text-on-surface-variant active:scale-95"
+                            >
+                                <span className="material-symbols-outlined text-sm">remove</span>
+                            </button>
+                            <input 
+                                type="number"
+                                min="1"
+                                max="30"
+                                value={limit} 
+                                onChange={(e) => {
+                                    let val = e.target.value;
+                                    if (val !== "") {
+                                        val = parseInt(val, 10);
+                                        if (val > 30) val = 30;
+                                        if (val < 1) val = 1;
+                                    }
+                                    setLimit(val);
+                                }}
+                                onBlur={(e) => {
+                                    if (limit === "" || limit < 1) setLimit(5);
+                                }}
+                                className="bg-transparent text-center w-10 text-on-surface font-bold focus:ring-0 focus:outline-none [-moz-appearance:_textfield] [&::-webkit-outer-spin-button]:m-0 [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:m-0 [&::-webkit-inner-spin-button]:appearance-none"
+                            />
+                            <button 
+                                type="button"
+                                onMouseDown={(e) => e.preventDefault()}
+                                onClick={() => setLimit(prev => Math.min(30, Number(prev || 5) + 1))}
+                                className="w-8 h-8 flex items-center justify-center rounded-full hover:bg-surface-container hover:text-primary transition-colors text-on-surface-variant active:scale-95"
+                            >
+                                <span className="material-symbols-outlined text-sm">add</span>
+                            </button>
+                        </div>
+                        <span className="text-on-surface-variant text-sm font-medium">results</span>
                     </div>
                 </div>
 

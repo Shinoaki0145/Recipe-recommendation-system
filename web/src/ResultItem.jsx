@@ -62,6 +62,22 @@ export default function ResultItem({ item, index, locateRight }) {
         }
     };
 
+    const parseCategory = (raw) => {
+        if (!raw) return [];
+        if (Array.isArray(raw)) return raw;
+        if (typeof raw === 'string') {
+            if (raw.startsWith('[') && raw.endsWith(']')) {
+                try {
+                    return JSON.parse(raw.replace(/'/g, '"'));
+                } catch {
+                    return raw.slice(1, -1).split(',').map(s => s.replace(/['"]/g, '').trim()).filter(Boolean);
+                }
+            }
+            return [raw];
+        }
+        return [];
+    };
+
     const formatViews = (views) => Number(views || 0).toLocaleString("vi-VN");
     const difficultyLabel = item?.difficulty === 1 ? "Dễ" : item?.difficulty === 2 ? "Trung bình" : item?.difficulty === 3 ? "Khó" : "N/A";
     const difficultyTone = item?.difficulty === 1 ? "easy" : item?.difficulty === 2 ? "medium" : item?.difficulty === 3 ? "hard" : "unknown";
@@ -77,6 +93,7 @@ export default function ResultItem({ item, index, locateRight }) {
             : popularityNormalized.includes("thap") || popularityNormalized.includes("low")
                 ? "low"
                 : "unknown";
+    const categories = parseCategory(item?.category);
     const ingredients = Array.isArray(item?.ingredients) ? item.ingredients : [];
     const instructions = parseInstructions(item?.instructions);
     const previewIngredients = ingredients.slice(0, 8);
@@ -119,7 +136,12 @@ export default function ResultItem({ item, index, locateRight }) {
                         loading="lazy"
                     />
                     <div className="result-card__badges">
-                        <span className="result-card__badge">{item?.category || "Món ăn"}</span>
+                        {categories.length > 0 
+                            ? categories.map((cat, i) => (
+                                <span key={i} className="result-card__badge">{cat}</span>
+                            ))
+                            : <span className="result-card__badge">Món ăn</span>
+                        }
                         <span className={`result-card__badge result-card__badge--difficulty result-card__badge--${difficultyTone}`}>
                             {difficultyLabel}
                         </span>
